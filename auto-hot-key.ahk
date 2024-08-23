@@ -1,110 +1,111 @@
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+Alt & i:: {
+    if (GetKeyState("Ctrl", "P")) {
+        if (GetKeyState("Shift", "P")) {
+            Send "^+{Up}"
+        } else {
+            Send "^{Up}"
+        }
+    } else {
+        if (GetKeyState("Shift", "P")) {
+            Send "+{Up}"
+        } else {
+            Send "{Up}"
+        }
+    }
+}
 
+Alt & j:: {
+    if (GetKeyState("Ctrl", "P")) {
+        if (GetKeyState("Shift", "P")) {
+            Send "^+{Left}"
+        } else {
+            Send "^{Left}"
+        }
+    } else {
+        if (GetKeyState("Shift", "P")) {
+            Send "+{Left}"
+        } else {
+            Send "{Left}"
+        }
+    }
+}
 
-Alt & i::
-If GetKeyState("Ctrl", "P"){
-If GetKeyState("Shift", "P")
-send ^+{up}
-Else
-send ^{up}
+Alt & k:: {
+    if (GetKeyState("Ctrl", "P")) {
+        if (GetKeyState("Shift", "P")) {
+            Send "^+{Down}"
+        } else {
+            Send "^{Down}"
+        }
+    } else {
+        if (GetKeyState("Shift", "P")) {
+            Send "+{Down}"
+        } else {
+            Send "{Down}"
+        }
+    }
 }
-Else{
-If GetKeyState("Shift", "P")
-send +{up}
-Else
-send {up}
-}
-return
 
-Alt & j::
-If GetKeyState("Ctrl", "P"){
-If GetKeyState("Shift", "P")
-send ^+{left}
-Else
-send ^{left}
+Alt & l:: {
+    if (GetKeyState("Ctrl", "P")) {
+        if (GetKeyState("Shift", "P")) {
+            Send "^+{Right}"
+        } else {
+            Send "^{Right}"
+        }
+    } else {
+        if (GetKeyState("Shift", "P")) {
+            Send "+{Right}"
+        } else {
+            Send "{Right}"
+        }
+    }
 }
-Else{
-If GetKeyState("Shift", "P")
-send +{left}
-Else
-send {left}
-}
-return
 
-Alt & k::
-If GetKeyState("Ctrl", "P"){
-If GetKeyState("Shift", "P")
-send ^+{down}
-Else
-send ^{down}
+Alt & a:: {
+    if (GetKeyState("Ctrl", "P")) {
+        if (GetKeyState("Shift", "P")) {
+            Send "{ASC 0196}"
+        } else {
+            Send "{ASC 0228}"
+        }
+    }
 }
-Else{
-If GetKeyState("Shift", "P")
-send +{down}
-Else
-send {down}
-}
-return
 
-Alt & l::
-If GetKeyState("Ctrl", "P"){
-If GetKeyState("Shift", "P")
-send ^+{right}
-Else
-send ^{right}
+Alt & o:: {
+    if (GetKeyState("Ctrl", "P")) {
+        if (GetKeyState("Shift", "P")) {
+            Send "{ASC 0214}"
+        } else {
+            Send "{ASC 0246}"
+        }
+    } else {
+        if (GetKeyState("Shift", "P")) {
+            Send "+{End}"
+        } else {
+            Send "{End}"
+        }
+    }
 }
-Else{
-If GetKeyState("Shift", "P")
-send +{right}
-Else
-send {right}
-}
-return
 
-Alt & a::
-If GetKeyState("Ctrl", "P"){
-If GetKeyState("Shift", "P")
-send {ASC 0196}
-Else
-send {ASC 0228}
+Alt & u:: {
+    if (GetKeyState("Ctrl", "P")) {
+        if (GetKeyState("Shift", "P")) {
+            Send "{ASC 0220}"
+        } else {
+            Send "{ASC 0252}"
+        }
+    } else {
+        if (GetKeyState("Shift", "P")) {
+            Send "+{Home}"
+        } else {
+            Send "{Home}"
+        }
+    }
 }
-return
 
-Alt & o::
-If GetKeyState("Ctrl", "P"){
-If GetKeyState("Shift", "P")
-send {ASC 0214}
-Else
-send {ASC 0246}
+Alt & s:: {
+    if (GetKeyState("Ctrl", "P")) {
+        Send "{ASC 0223}"
+    }
 }
-Else{
-If GetKeyState("Shift", "P")
-send +{end}
-Else
-send {end}
-}
-return
-
-Alt & u::
-If GetKeyState("Ctrl", "P"){
-If GetKeyState("Shift", "P")
-send {ASC 0220}
-Else
-send {ASC 0252}
-}
-Else{
-If GetKeyState("Shift", "P")
-send +{home}
-Else
-send {home}
-}
-return
-
-Alt & s::
-If GetKeyState("Ctrl", "P"){
-send {ASC 0223}
-}
-return
