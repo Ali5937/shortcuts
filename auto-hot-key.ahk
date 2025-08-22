@@ -142,13 +142,27 @@ LAlt & o::
 
 RAlt & o::
 {
-    if GetKeyState("Shift", "P")
+    if GetKeyState("Ctrl", "P")
     {
-        Send("+{End}")
+        if GetKeyState("Shift", "P")
+        {
+            Send("^+{End}")
+        }
+        else
+        {
+            Send("^{End}")
+        }
     }
     else
     {
-        Send("{End}")
+        if GetKeyState("Shift", "P")
+        {
+            Send("+{End}")
+        }
+        else
+        {
+            Send("{End}")
+        }
     }
 }
 
@@ -169,13 +183,27 @@ LAlt & u::
 
 RAlt & u::
 {
-    if GetKeyState("Shift", "P")
+    if GetKeyState("Ctrl", "P")
     {
-        Send("+{Home}")
-    }
+        if GetKeyState("Shift", "P")
+        {
+            Send("^+{Home}")
+        }
+        else
+        {
+            Send("^{Home}")
+        }
+    } 
     else
     {
-        Send("{Home}")
+        if GetKeyState("Shift", "P")
+        {
+            Send("+{Home}")
+        }
+        else
+        {
+            Send("{Home}")
+        }
     }
 }
 
